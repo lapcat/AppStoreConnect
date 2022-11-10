@@ -1,0 +1,13 @@
+{
+    "manifest_version": 3,
+    "name": "Login for App Store Connect",
+    "version": "1.0",
+    "description": "Skip two-step login for App Store Connect",
+    "author": "Jeff Johnson",
+    "permissions": [],
+    "content_scripts": [{
+        "all_frames": true,
+        "js": ["content.js"],
+        "matches": ["https://idmsa.apple.com/appleauth/auth/signin*"]
+    }]
+}

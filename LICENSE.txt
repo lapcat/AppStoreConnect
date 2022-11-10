@@ -1,0 +1,7 @@
+1. Login for App Store Connect is Copyright © 2022 Jeff Johnson. All rights reserved.
+2. You may modify the source code, but you must not modify or remove this license file.
+3. You may make copies of the Login for App Store Connect source code and redistribute copies of the source code, but you must not redistribute the unmodified or modified source code as part of another software product without express written permission from Jeff Johnson.
+4. All copies of the source code must include this license file unmodified.
+5. You must not charge money for the unmodified or modified source code.
+6. You may run the unmodified or modified source code, by itself or as part of a browser extension app. In accordance with 3, you must not redistribute a browser extension app that includes the unmodified or modified source code of Login for App Store Connect without express written permission from Jeff Johnson.
+7. The spirit of this license agreement is that Jeff Johnson provides Login for App Store Connect to the public for free, and nobody is to make money from selling Jeff's work as if it were their own.
