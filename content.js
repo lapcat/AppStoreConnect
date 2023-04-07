@@ -25,6 +25,7 @@ function ASCLogin() {
         window.alert("AppleID required!");
         return;
     }
+    account.dispatchEvent(new Event("focus"));
     account.value = AppleID;
     account.dispatchEvent(new Event("input"));
     
