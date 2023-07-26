@@ -19,8 +19,10 @@ if (account !== null) {
 }
 
 function ASCLogin() {
-    if (account.value.length > 0)
+    if (account.value.length > 0) {
+        ContinueWithPassword();
         return;
+    }
     if (AppleID.length === 0) {
         window.alert("AppleID required!");
         return;
@@ -39,13 +41,13 @@ function ASCLogin() {
             if (!button.disabled) {
                 disabledObserver.disconnect();
                 button.click();
-                ASCFocusPassword();
+                ContinueWithPassword();
             }
         });
         disabledObserver.observe(button, {attributes: true, attributeFilter: ["disabled"]});
     } else {
         button.click();
-        ASCFocusPassword();
+        ContinueWithPassword();
     }
 }
 
@@ -66,6 +68,24 @@ function ASCFocusPassword() {
         tabindexObserver.observe(password, {attributes: true, attributeFilter: ["tabindex"]});
     } else {
         password.focus();
+    }
+}
+
+function ContinueWithPassword() {
+    let button = document.getElementById("continue-password");
+    if (button !== null) {
+        button.click();
+        ASCFocusPassword();
+    } else {
+        const continueObserver = new MutationObserver(function (records) {
+            button = document.getElementById("continue-password");
+            if (button !== null) {
+                continueObserver.disconnect();
+                button.click();
+                ASCFocusPassword();
+            }
+        });
+        continueObserver.observe(document, {childList: true, subtree: true});
     }
 }
 
