@@ -8,6 +8,6 @@
     "content_scripts": [{
         "all_frames": true,
         "js": ["content.js"],
-        "matches": ["https://idmsa.apple.com/appleauth/auth/signin*"]
+        "matches": ["https://idmsa.apple.com/appleauth/auth/signin*", "https://idmsa.apple.com/appleauth/auth/authorize/signin*"]
     }]
 }
