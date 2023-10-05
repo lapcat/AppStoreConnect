@@ -81,8 +81,10 @@ function ContinueWithPassword() {
             button = document.getElementById("continue-password");
             if (button !== null) {
                 continueObserver.disconnect();
-                button.click();
-                ASCFocusPassword();
+                setTimeout(() => {
+                    button.click();
+                    ASCFocusPassword();
+                }, 500);
             }
         });
         continueObserver.observe(document, {childList: true, subtree: true});
