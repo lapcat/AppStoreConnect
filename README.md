@@ -17,8 +17,10 @@ Login for App Store Connect is compatible with Safari and Google Chrome. You can
 
 Creating a native wrapper for Safari is mostly an automated process:
 
-1. After adding your Apple ID in content.js, execute the following Terminal command to run the [safari-web-extension-converter](https://developer.apple.com/documentation/safariservices/safari_web_extensions/converting_a_web_extension_for_safari/):
-> xcrun safari-web-extension-converter /Path/To/Extension/Folder
+1. After adding your Apple ID in [content.js](content.js), execute the following Terminal command to run the [safari-web-extension-converter](https://developer.apple.com/documentation/safariservices/safari_web_extensions/converting_a_web_extension_for_safari/):
+```
+xcrun safari-web-extension-converter /Path/To/Extension/Folder
+```
 
 2. Ignore the complaint about the missing icon.
 
@@ -26,9 +28,9 @@ Creating a native wrapper for Safari is mostly an automated process:
 
 4. Try building the project; likely Xcode will have errors for a missing file with the same name of the project. You can remove that file reference from the Copy phase of both extension targets.
 
-5. Build and run; enable the Safari extension, allow access to the _idmsa.apple.com_ website and test.
+5. Build and run; enable the Safari extension, allow access to the `idmsa.apple.com` website and test.
 
-6. Archive and copy the wrapper app into your Applications ƒ and re-enable the extension in Safari.
+6. Archive and copy the wrapper app into your Applications folder and enable the extension in Safari.
 
 ## Author
 
